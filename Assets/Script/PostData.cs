@@ -9,7 +9,6 @@ using UnityEngine.UI;
 public class PostData : MonoBehaviour
 {
     public GameObject Interactive;
-    public Text text;
     private void Start()
     {
         
@@ -17,10 +16,6 @@ public class PostData : MonoBehaviour
         #region Off All
 
         #endregion
-    }
-    public void changeText()
-    {
-        text.text = "Helloooooooo";
     }
     #region Rotate
     public void RotateOn()
