@@ -74,13 +74,14 @@ public class GenButton : MonoBehaviour
 
 IEnumerator EventClick(int index)
     {
-        string bodyJsonString = "{\"option\":\"ACCESS\"," + $"\"access_property_index\":\"{index}\"," + "\"mode\":\"ON\","+"\"table\":\"hcm_scenario_0\"}";
+        string bodyJsonString = "{\"option\":\"ACCESS\"," + $"\"access_property_index\":{index}," + "\"mode\":\"ON\","+"\"table\":\"hcm_scenario_0\"}";
         var request = new UnityWebRequest($"https://csl-hcmc.com/api/set-option?", "POST");
         byte[] bodyRaw = Encoding.UTF8.GetBytes(bodyJsonString);
         request.uploadHandler = (UploadHandler)new UploadHandlerRaw(bodyRaw);
         request.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
         request.SetRequestHeader("Content-Type", "application/json");
         yield return request.SendWebRequest();
+        Debug.Log(bodyJsonString);
         Debug.Log("Status Code: " + request.responseCode);
     }
 
