@@ -34,8 +34,9 @@ Visual studio 2019
 <details>
   <summary>Click to expand!</summary>
 
+![Video 1](img/video01.gif)
+![Video 1](img/video02.gif)
 ![Screenshot 1](img/Screenshot01.png)
 ![Screenshot 2](img/Screenshot02.png)
-![Video 1](img/video01.gif)
 
 </details>
